@@ -2,7 +2,7 @@
 
 .Título{
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     margin: 2rem;
     color: white;
 }
@@ -19,15 +19,29 @@
 }
 
 .Presentación{
-    color:antiquewhite;
-    margin: 3rem;
+     position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0; 
     padding: 1rem;
+    background-color: darkblue;
+    color: antiquewhite;
     text-align: end;
+    
+    
 
 }
 
 .Cuerpo{
     background-image: url('../img/Disseny\ sense\ títol.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    height: 100vh;  
+    margin: 2rem;
+    padding: 2rem;
+    
 }
 
 
