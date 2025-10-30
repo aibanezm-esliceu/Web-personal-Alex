@@ -408,3 +408,12 @@ th.nav-links {
         padding: 5px 0;
     }
 }
+@media (max-width: 650px) {
+    /* ... (otros estilos responsivos) ... */
+
+    /* AJUSTE ESPECÍFICO PARA MÓVILES */
+    .Cuerpo, .Cuerpo1, .Cuerpo2, .cuerpo3 {
+        /* Muestra el centro horizontal y la parte superior vertical */
+        background-position: center top !important; 
+    }
+}
