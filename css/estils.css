@@ -1,23 +1,23 @@
 
 
 .Título{
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    margin: 1rem; 
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center; 
+    padding: 1.5rem; 
     
-    /* Importante: Mantén este padding si quieres que la caja sea grande */
-    padding: 4rem; 
+    /* ⬅️ CLAVE: Ajuste de Dimensiones y Centrado */
+    width: 30%; /* ⬅️ HECHO MÁS CORTO: 20% era muy pequeño, 30% es un buen equilibrio */
+    max-width: 300px; /* Asegura que no sea demasiado ancho en pantallas gigantes */
+    margin: 30px auto; /* ⬅️ CENTRADO HORIZONTAL: Esto reemplaza 'margin-right: 20rem;' */
     
-    /* Eliminamos background-color y añadimos la imagen: */
-    background-image: url(../img/jbareham_201201_ecl1050_goty_2020_top_50_02.avif);
-    background-size: cover; /* Para que la imagen cubra toda la caja */
-    background-position: center; /* Para centrar la imagen */
-    background-repeat: no-repeat; /* Para que no se repita */
+    /* Estilos Gaming (se mantienen) */
+    background-color: #1A1A1D; 
+    color: #d400ff; 
+    border: 3px solid #ae00ff; 
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); 
+    border-radius: 8px; 
+    position: relative; /* Mantenemos relative */
     
-    /* Hacemos el fondo transparente si quieres ver la imagen completa */
-    background-color: transparent; 
-    
-    color: antiquewhite; /* El color del texto "Outer Gaming" */
 
 }
 
@@ -56,10 +56,11 @@
 }
 
 .Cuerpo{  /* Estilo para el cuerpo de la página */
-    background-image: url('../img/Disseny\ sense\ títol.jpg');
+    background-image: url('../img/Outer\ Gaming.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;   
+    position: absolute;
     height: 100vh;  
     margin: 2rem;
     padding: 2rem;
@@ -182,15 +183,17 @@ nav ul {
 
 /* Aunque tu HTML usa <th> de forma incorrecta, ajustamos para que funcione */
 th.nav-links {
-    display: flex; 
+    display: flex; /* Alinea los enlaces dentro del th */
+    justify-content: center;
     align-items: center;
 }
 
 .Cuerpo1{
     background-image: url(../img/Sobre\ mi.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: cover; /* Para que la imagen cubra toda la caja */
+    background-repeat: no-repeat; /* Para que no se repita */
+    background-attachment: fixed; /* Para que la imagen quede fija al hacer scroll */
+    
 }
 
 .caja-descripcion {
@@ -260,3 +263,110 @@ th.nav-links {
     max-width: 700px;
 }
 
+.cuerpo3{  /* Estilo para el cuerpo de la página Sobre mí */
+    background-image: url('..//img/Proyectos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    margin: 0;
+    padding: 0;    
+}
+.Proyectos-Titulo {  /* Estilo para el título de la sección de proyectos */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #00FF7F; /* Verde Neón */
+    margin: 40px 0 20px 0; /* Margen superior e inferior para separarlo del nav */
+    padding: 10px;
+    /* Efecto de resplandor para el título */
+    text-shadow: 0 0 15px rgba(0, 255, 127, 0.9);
+}
+
+/* 1. LAYOUT GRID: Contenedor de las cajas (tarjetas) */
+.grid-proyectos { 
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto; /* Centra la cuadrícula */
+    padding: 20px;
+    
+    display: grid;
+    /* Crea columnas de forma responsive: mínimo 300px, máximo 1fr (igual ancho) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espacio entre las cajas */
+}
+
+/* 2. ESTILO DE CADA CAJA/TARJETA */
+.proyecto-card { /* Estilo de la tarjeta del proyecto */
+    background-color: rgba(30, 30, 30, 0.95); /* Fondo oscuro semi-transparente */
+    border-radius: 10px;
+    overflow: hidden; /* Importante para bordes redondeados */
+    text-align: center;
+    padding-bottom: 20px;
+    
+    /* Estilo Gaming: Borde y Sombra */
+    border: 3px solid #FF4500; /* Borde Naranja Neón */
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto-card:hover { /* Efecto hover */
+    transform: translateY(-8px); /* Efecto de "levantarse" */
+    box-shadow: 0 5px 25px rgba(0, 255, 127, 0.8); /* Resplandor más intenso */
+}
+
+.proyecto-titulo { /* Título del proyecto */
+    color: #00FF7F; /* Verde Neón para el título del proyecto */
+    padding: 15px;
+    margin: 0;
+}
+
+.proyecto-imagen { /* Imagen del proyecto */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #00FF7F;
+}
+
+.proyecto-descripcion { /* Descripción del proyecto */
+    color: antiquewhite;
+    padding: 15px;
+    font-family: 'Gill Sans', sans-serif;
+    line-height: 1.4;
+}
+
+.btn-ver-mas {  
+    /* Estilo del botón (similar al nav-boton, pero diferente color) */
+    display: inline-block;
+    background-color: #00FF7F; /* Verde Neón */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #00e673;
+}
+
+.Proyectos{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center; 
+    padding: 1.5rem; 
+    
+    /* ⬅️ CLAVE: Ajuste de Dimensiones y Centrado */
+    width: 30%; /* ⬅️ HECHO MÁS CORTO: 20% era muy pequeño, 30% es un buen equilibrio */
+    max-width: 300px; /* Asegura que no sea demasiado ancho en pantallas gigantes */
+    margin: 30px auto; /* ⬅️ CENTRADO HORIZONTAL: Esto reemplaza 'margin-right: 20rem;' */
+    
+    /* Estilos Gaming (se mantienen) */
+    background-color: #1A1A1D; 
+    color: #00f7ff; 
+    border: 3px solid #ae00ff; 
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); 
+    border-radius: 8px; 
+    position: relative; /* Mantenemos relative */
+    
+
+}
