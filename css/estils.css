@@ -221,6 +221,7 @@ th.nav-links {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;   
+    background-position: center center; /* ⬅️ LÍNEA A AÑADIR */
   min-height: 100vh; /* ⬅️ CORRECCIÓN: Permite que la página haga scroll si el contenido es largo */
     margin: 0; /* Quitar márgenes excesivos del body */
     padding: 0; /* Quitar padding excesivo del body */
