@@ -373,48 +373,84 @@ th.nav-links {
 }
 @media (max-width: 650px) {
 
-    /* 1. Navegación: Excelente, se mantiene */
-    nav, nav ul, th.nav-links {
-        flex-direction: column; 
-        padding: 0;
+    /* ======================================= */
+    /* 1. AJUSTES DE IMÁGENES / FONDOS (Backgrounds) */
+    /* ======================================= */
+    
+    /* Centra la parte importante de la imagen de fondo para todos los cuerpos */
+    .Cuerpo, .Cuerpo1, .Cuerpo2, .cuerpo3 {
+        /* Fuerza la posición central, lo mejor para pantallas estrechas */
+        background-position: center center !important; 
+        /* Si notas que se recorta mal, prueba 'center top' */
+        /* background-position: center top !important; */
     }
     
-    nav a {
-        width: 90% !important;
-        margin: 5px auto !important;
-        padding: 8px !important;
+    /* Asegura que las imágenes de perfil o contenido sean flexibles */
+    .foto img {
+        width: 80%; /* Reduce el tamaño de la imagen de perfil/foto a un 80% */
+        height: auto;
+    }
+    
+    .proyecto-imagen {
+        height: 150px; /* Hace las imágenes de proyecto más cortas en móvil */
+        object-fit: cover;
     }
 
-    /* 2. Contenedores Principales: Forzamos el 95% de ancho en móvil */
+    /* ======================================= */
+    /* 2. AJUSTES DE TAMAÑOS Y CONTENEDORES */
+    /* ======================================= */
+    
+    /* Contenedores Principales: Ocupan casi todo el ancho disponible */
     .Título, 
     .Contacto,
     .Presentación,
     .caja-descripcion,
     .grid-proyectos {
-        width: 95% !important; 
-        margin: 20px auto !important; /* Más apretado en móvil */
-        max-width: none !important; 
-        padding: 1rem !important; /* Reducir padding interno */
+        width: 95% !important; /* ✅ Ocupa el ancho máximo sin desbordar */
+        margin: 20px auto !important; /* Centrado y margen ajustado */
+        max-width: none !important; /* Elimina la restricción de ancho máximo de escritorio */
+        padding: 1rem !important; /* Reduce el padding interno para ahorrar espacio */
     }
 
-    /* 3. Grid de Proyectos: Apilamiento vertical */
+    /* Grid de Proyectos: Pasamos a una sola columna */
     .grid-proyectos {
-        grid-template-columns: 1fr; /* Una columna */
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    /* 4. Tabla (Formulario): Aseguramos que las celdas se apilen */
+    /* Navegación: Apilamos los botones verticalmente */
+    nav, nav ul, th.nav-links {
+        flex-direction: column; 
+    }
+    
+    nav a {
+        width: 90% !important;
+        margin: 5px auto !important;
+    }
+
+    /* ======================================= */
+    /* 3. AJUSTES DE TABLAS (.Tabla) */
+    /* ======================================= */
+    
+    .Tabla {
+        width: 95% !important; /* Asegura que la tabla no sea más ancha que la pantalla */
+        padding: 10px !important;
+    }
+    
+    /* CLAVE: Hace que cada celda de la tabla se comporte como un bloque (una línea) */
     .Tabla td {
         display: block; 
-        width: 100%;
+        width: 100%; /* La celda ocupa todo el ancho de la tabla */
         padding: 5px 0;
+        text-align: left; /* Alinea el contenido a la izquierda, más legible */
     }
-}
-@media (max-width: 650px) {
-    /* ... (otros estilos responsivos) ... */
-
-    /* AJUSTE ESPECÍFICO PARA MÓVILES */
-    .Cuerpo, .Cuerpo1, .Cuerpo2, .cuerpo3 {
-        /* Muestra el centro horizontal y la parte superior vertical */
-        background-position: center top !important; 
+    
+    /* Asegura que los campos de entrada de texto también ocupen el ancho completo */
+    .Tabla input[type="text"], 
+    .Tabla input[type="email"],
+    .Tabla input[type="tel"],
+    .Tabla input[type="date"],
+    .Tabla textarea {
+        width: 90% !important;
     }
 }
