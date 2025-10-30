@@ -33,7 +33,6 @@
 }
 
 .Presentación{   /* Estilo para la sección de presentación */
-     position:absolute;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     margin: 1rem; 
@@ -60,8 +59,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;   
-    position: absolute;
-    height: 100vh;  
+    height: min-height: 100vh; /* ⬅️ CORRECCIÓN: Permite que la página haga scroll si el contenido es largo */
+     margin: 0; /* Quitar márgenes excesivos del body */
     margin: 2rem;
     padding: 2rem;
     
@@ -254,7 +253,8 @@ th.nav-links {
 .Tabla{
    /* ⬅️ CLAVE: Ajuste de Margen y Centrado */
     /* Empuja la tabla hacia abajo (por ejemplo, 50px) y la centra horizontalmente */
-    margin: 500px auto; 
+    margin-top: 900px;
+    margin: 50px auto; 
     padding: 30px; 
     /* El resto de estilos de borde, fondo, etc., deben estar fuera de aquí */
     position: relative; 
@@ -370,34 +370,41 @@ th.nav-links {
     
 
 }
+@media (max-width: 650px) {
 
-.contenedor {
-    width: 90%; /* ✅ Ocupa el 90% del ancho del padre */
-    max-width: 1200px; /* ✅ Frena el estiramiento en monitores gigantes */
-    margin: 0 auto; /* ✅ Centrado */
-    padding: 2rem; /* ✅ Padding relativo al tamaño de fuente base */
-}
+    /* 1. Navegación: Excelente, se mantiene */
+    nav, nav ul, th.nav-links {
+        flex-direction: column; 
+        padding: 0;
+    }
+    
+    nav a {
+        width: 90% !important;
+        margin: 5px auto !important;
+        padding: 8px !important;
+    }
 
-@media( max-width: 600px) {
-    /* 1. Navegación: Cambiar a apilamiento vertical */
-    nav ul {
-        flex-direction: column; /* Apila los botones de navegación */
+    /* 2. Contenedores Principales: Forzamos el 95% de ancho en móvil */
+    .Título, 
+    .Contacto,
+    .Presentación,
+    .caja-descripcion,
+    .grid-proyectos {
+        width: 95% !important; 
+        margin: 20px auto !important; /* Más apretado en móvil */
+        max-width: none !important; 
+        padding: 1rem !important; /* Reducir padding interno */
+    }
+
+    /* 3. Grid de Proyectos: Apilamiento vertical */
+    .grid-proyectos {
+        grid-template-columns: 1fr; /* Una columna */
     }
     
-    /* 2. Grid/Flexbox: Cambiar layouts de múltiples columnas */
-    .contenedor-grid {
-        /* Fuerza una sola columna para que las tarjetas se apilen */
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-    
-    /* 3. Reducción de tamaños */
-    h1 {
-        font-size: 1.5rem; /* Reduce el tamaño del título */
-    }
-    
-    .contenedor {
-        width: 95%; /* Asegura que ocupe casi todo el ancho */
-        padding: 1rem; /* Reduce el padding para ahorrar espacio */
+    /* 4. Tabla (Formulario): Aseguramos que las celdas se apilen */
+    .Tabla td {
+        display: block; 
+        width: 100%;
+        padding: 5px 0;
     }
 }
