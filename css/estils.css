@@ -1,10 +1,24 @@
 
 
 .Título{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    margin: 2rem;
-    color: white;
+    margin: 1rem; 
+    
+    /* Importante: Mantén este padding si quieres que la caja sea grande */
+    padding: 4rem; 
+    
+    /* Eliminamos background-color y añadimos la imagen: */
+    background-image: url(../img/jbareham_201201_ecl1050_goty_2020_top_50_02.avif);
+    background-size: cover; /* Para que la imagen cubra toda la caja */
+    background-position: center; /* Para centrar la imagen */
+    background-repeat: no-repeat; /* Para que no se repita */
+    
+    /* Hacemos el fondo transparente si quieres ver la imagen completa */
+    background-color: transparent; 
+    
+    color: antiquewhite; /* El color del texto "Outer Gaming" */
+
 }
 
 .foto{
@@ -18,22 +32,30 @@
     
 }
 
-.Presentación{
-     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0; 
-    padding: 1rem;
-    background-color: darkblue;
-    color: antiquewhite;
-    text-align: end;
+.Presentación{   /* Estilo para la sección de presentación */
+     position:absolute;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 1rem; 
+    padding: 1.5rem; /* Aumenta el padding para que parezca una caja más importante */
+    margin: 1rem; 
+  background-color: #1A1A1D; 
+    color: #FF4500; /* Texto en color naranja/rojo de energía */
+    bottom: 20px;
+    /* Efecto Gaming: Borde y Sombra de Resplandor Neón */
+    border: 3px solid #00FF7F; /* Borde de color Verde Neón */
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); /* Resplandor que le da el efecto neón */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    position: relative; /* Cambiado a 'relative' o 'static' */
+    bottom: auto; /* Eliminado */
+    right: auto; /* Eliminado */
+
     
     
 
 }
 
-.Cuerpo{
+.Cuerpo{  /* Estilo para el cuerpo de la página */
     background-image: url('../img/Disseny\ sense\ títol.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,7 +67,7 @@
 }
 
 
-nav{
+nav{ /* Estilo para la barra de navegación */
     padding: 1rem;
     color: white;
     text-align: center;
@@ -53,43 +75,113 @@ nav{
     padding: 3rem;
 }
 
-#Botón1{
-    background-color: blue;
+#Botón1{ /* Estilo para el botón 1 */
+   border: 3px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra de resplandor verde */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     color: white;
-    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    text-decoration: none;
     margin: 1rem;
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-#Botón2{
-    background-color: blue;
+    
+#Botón2{ /* Estilo para el botón 2 */
+     border: 3px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra de resplandor verde */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     color: white;
-    padding: 0.5rem 1rem;
-    border: none;
     border-radius: 5px;
-    text-decoration: none;
     margin: 1rem;
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
 }
-#Botón3{
-    background-color: blue;
+
+#Botón3{ /* Estilos para el botón 3 */
+     border: 3px solid #00ff00; /* Borde verde neón */
+    border: 3px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra de resplandor verde */
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     margin: 1rem;
-    padding: 0.3rem;
+    text-transform: uppercase;
 }
-#Botón4{
-    background-color: blue;
+#Botón4{ /* Estilos para el botón 4 */
+    border: 3px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra de resplandor verde */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     color: white;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    text-decoration: none;
     margin: 1rem;
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* Mejora de estilos para la tabla de formulario */
+.Tabla { /* Clase para la tabla del formulario */
+    /* Fondo oscuro para la tabla */
+    background-color: rgba(30, 30, 30, 0.95); /* Gris muy oscuro, casi negro, semi-transparente */
+    color: #f0f0f0; /* Color de texto claro */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto; /* Centra la tabla y da espacio */
+    width: 60%; /* Ajusta el ancho, por ejemplo, al 60% */
+    max-width: 700px;
+    margin-top: 900px;
+    
+    /* Efecto "Gaming" con borde neón y sombra */
+    border: 3px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra de resplandor verde */
+}
+
+nav {
+    /* Define que la navegación abarque todo el ancho */
+    width: 100%;
+    
+    /* Propiedades para el fondo del banner */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
+    
+    /* Agregamos un borde/sombra de estilo gaming */
+    border-bottom: 3px solid #00ff00; /* Línea inferior de neón verde */
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4); /* Sombra que simula brillo */
+    
+    /* Usamos Flexbox para centrar y distribuir los botones */
+    display: flex;
+    justify-content: center; /* Centra los elementos (los botones) horizontalmente */
+    align-items: center;
+    
+    /* Relleno interno para que la barra tenga altura */
+    padding: 10px 0; 
+    
+    /* Eliminamos el margen y relleno que tenías antes, ya que el banner debe ser limpio */
+    margin: 0;
+    
+    /* Aseguramos que la navegación esté en la parte superior */
+    position: sticky; /* O 'fixed' si quieres que se quede fija al hacer scroll */
+    top: 0;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Ajuste adicional: Limpiar el <ul> y <th> */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para que los elementos internos (th) se alineen */
+}
+
+/* Aunque tu HTML usa <th> de forma incorrecta, ajustamos para que funcione */
+th.nav-links {
+    display: flex; 
+    align-items: center;
 }
