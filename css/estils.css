@@ -370,3 +370,34 @@ th.nav-links {
     
 
 }
+
+.contenedor {
+    width: 90%; /* ✅ Ocupa el 90% del ancho del padre */
+    max-width: 1200px; /* ✅ Frena el estiramiento en monitores gigantes */
+    margin: 0 auto; /* ✅ Centrado */
+    padding: 2rem; /* ✅ Padding relativo al tamaño de fuente base */
+}
+
+@media( max-width: 600px) {
+    /* 1. Navegación: Cambiar a apilamiento vertical */
+    nav ul {
+        flex-direction: column; /* Apila los botones de navegación */
+    }
+    
+    /* 2. Grid/Flexbox: Cambiar layouts de múltiples columnas */
+    .contenedor-grid {
+        /* Fuerza una sola columna para que las tarjetas se apilen */
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    
+    /* 3. Reducción de tamaños */
+    h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+    
+    .contenedor {
+        width: 95%; /* Asegura que ocupe casi todo el ancho */
+        padding: 1rem; /* Reduce el padding para ahorrar espacio */
+    }
+}
